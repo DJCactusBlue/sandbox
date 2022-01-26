@@ -6,6 +6,28 @@ h2 {
   padding: 10px; 
 }
 
+/***********************************************
+Image (on right side) next to text configuration
+************************************************/
+.imgcol {
+  float: left;
+  width: 30%;
+  padding: 10px;
+}
+
+.txtcol {
+  float: left;
+  width: 65%;
+  padding: 10px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 
 
 /***********
