@@ -6,6 +6,17 @@ h2 {
   padding: 10px; 
 }
 
+body {
+  background: white;
+  color: black;
+  font-family: Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 1.6em;
+  margin: 0;
+  padding: 10px; }
+
 /***********************************************
 Image (on right side) next to text configuration
 ************************************************/
@@ -28,95 +39,46 @@ Image (on right side) next to text configuration
   display: table;
 }
 
-/*************
-Tab Navigation
-**************/
+/******************
+Top Navigation
+*******************/
+/* Style the navigation menu */
+.navbar {
+  width: 100%;
+  background-color: gold;
+  overflow: auto;
+}
 
-body {
-  background: white;
-  color: black;
-  font-family: Verdana, sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  letter-spacing: 0.01em;
-  line-height: 1.6em;
-  margin: 0;
-  padding: 10px; }
+/* Navigation links */
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 33.33%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+  text-align: center; /* If you want the text to be centered */
+}
 
-button:focus,
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none; }
+/* Add a background color on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+}
 
-.tabs {
-  display: block;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin: 0;
-  overflow: hidden; }
-  .tabs [class^="tab"] label,
-  .tabs [class*=" tab"] label {
-    color: #447870;
-    cursor: pointer;
-    display: block;
-    font-size: 1.5em;
-    font-weight: 600;
-    line-height: 1em;
-    padding: 2rem 0;
-    text-align: center; }
-  .tabs [class^="tab"] [type="radio"],
-  .tabs [class*=" tab"] [type="radio"] {
-    border-bottom: 1px solid rgba(239, 237, 239, 0.5);
-    cursor: pointer;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+/* Style the current/active link */
+.navbar a.active {
+  background-color: #447870;
+}
+
+/* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
     display: block;
     width: 100%;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
-    .tabs [class^="tab"] [type="radio"]:hover, .tabs [class^="tab"] [type="radio"]:focus,
-    .tabs [class*=" tab"] [type="radio"]:hover,
-    .tabs [class*=" tab"] [type="radio"]:focus {
-      border-bottom: 1px solid darkblue; }
-    .tabs [class^="tab"] [type="radio"]:checked,
-    .tabs [class*=" tab"] [type="radio"]:checked {
-      border-bottom: 3px solid darkblue; }
-    .tabs [class^="tab"] [type="radio"]:checked + div,
-    .tabs [class*=" tab"] [type="radio"]:checked + div {
-      opacity: 1; }
-    .tabs [class^="tab"] [type="radio"] + div,
-    .tabs [class*=" tab"] [type="radio"] + div {
-      display: block;
-      opacity: 0;
-      padding: 2rem 0;
-      width: 90%;
-      -webkit-transition: all 0.3s ease-in-out;
-      -moz-transition: all 0.3s ease-in-out;
-      -o-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out; }
-  .tabs .tab-2 {
-    width: 33%; }
-    .tabs .tab-2 [type="radio"] + div {
-      width: 250%;
-      margin-left: 200%; }
-    .tabs .tab-2 [type="radio"]:checked + div {
-      margin-left: 0; }
-    .tabs .tab-2:nth-child(2) [type="radio"] + div {
-      margin-left: 100%; }
-    .tabs .tab-2:nth-child(2) [type="radio"]:checked + div {
-      margin-left: -100%; }
-    .tabs .tab-2:last-child [type="radio"] + div {
-      margin-left: 200%; }
-    .tabs .tab-2:last-child [type="radio"]:checked + div {
-      margin-left: -200%; }
+    text-align: left; /* If you want the text to be left-aligned on small screens */
+  }
+}
 
 /******************
 Side Tab Navigation
