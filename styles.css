@@ -1,13 +1,32 @@
 /**************
-Main text color
+Main body styles
 ***************/
-h2 { 
+.container1 {
+  width:100%;
+  max-width:1080px;
+  margin-top:0;
+  margin: 0 auto;
+  height:auto;
+  padding:0;
+  background:#fff; 
+}
+
+.object1 {
+  position:sticky;
+  width:100%;
+  max-width:1080px;
+  padding:0;
+  object-position:top middle;
+  display:block;
+}
+
+h3 { 
   color: #447870;
   padding: 10px; 
 }
 
 body {
-  background: white;
+  background: #ccc;
   color: black;
   font-family: Verdana, sans-serif;
   font-size: 20px;
@@ -15,7 +34,8 @@ body {
   letter-spacing: 0.01em;
   line-height: 1.6em;
   margin: 0;
-  padding: 10px; }
+  padding: 10px; 
+}
 
 /***********************************************
 Image (on right side) next to text configuration
@@ -44,21 +64,24 @@ Top Navigation
 *******************/
 /* Style the navigation menu */
 .navbar {
-  width: 100%;
+  display:block;
   background-color: gold;
-  overflow: auto;
+  overflow: hidden;
+  position:sticky;
+  width:100%
 }
 
 /* Navigation links */
 .navbar a {
   float: left;
-  padding: 12px;
+  padding:0;
   color: white;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
   position: static;
   width: 33.33%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
   text-align: center; /* If you want the text to be centered */
+  vertical-align:middle;
 }
 
 /* Add a background color on mouse-over */
@@ -92,7 +115,8 @@ Side Navigation
   width: 200px;
   background-color: #f1f1f1;
   position: fixed;
-  height: 100%;
+  display:block;
+  height: auto;
   overflow: auto;
 }
 
@@ -120,7 +144,7 @@ Side Navigation
 div.content {
   margin-left: 200px;
   padding: 1px 16px;
-  height: 1000px;
+  height: auto;
 }
 
 /***********
